@@ -1,24 +1,45 @@
 /* Navbar.css */
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    background-color: #282c34;
-  }
-  
-  .navbar-logo {
-    height: 40px;
-    margin-right: 1rem;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-links a {
-    color: white;
-    text-decoration: none;
-  }
-  
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(75, 85, 104, 0.9);
+  position: fixed;
+  top: 0; /* Coloca la navbar en la parte superior */
+  left: 0; /* Alinea la navbar a la izquierda */
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  z-index: 1000;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; 
+  margin-right: 40px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  text-align: right;
+}
+.signin-btn {
+  background-color: #3545a4; 
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 2rem;
+}
+
+.signin-btn:hover {
+  background-color: #45a049;
+}
