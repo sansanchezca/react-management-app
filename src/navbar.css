@@ -1,45 +1,86 @@
-/* Navbar.css */
+/* Default navbar styles */
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   background-color: rgba(75, 85, 104, 0.9);
   position: fixed;
-  top: 0; /* Coloca la navbar en la parte superior */
-  left: 0; /* Alinea la navbar a la izquierda */
-  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  box-sizing: border-box; /* Ensure padding does not affect layout */
 }
 
 .navbar-logo {
   height: 40px;
-  margin-right: 1rem;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin-left: auto; 
-  margin-right: 40px;
+  margin-left: auto;
 }
 
 .navbar-links a {
   color: white;
   text-decoration: none;
-  text-align: right;
 }
+
 .signin-btn {
-  background-color: #3545a4; 
+  background-color: #3545a4;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-left: 2rem;
 }
 
 .signin-btn:hover {
   background-color: #45a049;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px; /* Space between hamburger and logo */
+}
+
+/* Media query for small screens (phones) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem; /* Ensure there's enough padding around */
+    justify-content: space-between; /* Maintain space between items */
+  }
+
+  .navbar-links {
+    display: none; /* Hide the links by default */
+    flex-direction: column; /* Stack the links vertically */
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    right: 0;
+    background-color: rgba(75, 85, 104, 0.9);
+    width: 100%; /* Take up the full width */
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .navbar-links.open {
+    display: flex; /* Show the links when the menu is open */
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger on small screens */
+    position: absolute;
+    top: 20px; /* Align at the top of the navbar */
+    right: 20px; /* Align at the right side */
+  }
 }
