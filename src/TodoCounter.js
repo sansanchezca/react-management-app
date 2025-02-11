@@ -1,9 +1,14 @@
 
-function TodoCounter() {
+function TodoCounter({ total, completed}) {
     return (
-    <li>
-        You have completed 3 of 5 tasks
-    </li>
+    <h1 style={{
+        fontSize: '24px',
+        textAlign: 'center',
+        margin: 0,
+        padding: '48px',
+    }}>
+        You have {completed} of {total} tasks.
+    </h1>
     );
 
 }
