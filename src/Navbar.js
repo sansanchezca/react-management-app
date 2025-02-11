@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; // Only import React once and include useState
 import logo from './logo.svg'; // Import the logo
-import './navbar.css'; // Import the CSS for styling
+import './Navbar.css'; // Import the CSS for styling
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // useState hook for toggling menu visibility
@@ -26,4 +26,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export { Navbar };

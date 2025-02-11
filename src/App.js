@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.css';
-import './navbar.css'; // Import the CSS file
-import Navbar from './navbar.jsx'; // Import the Navbar component
+import { TodoCounter } from './TodoCounter.js'
+import { TodoList } from './TodoList.js';
+import { Navbar } from './Navbar.js';
+
 
 
 function App() {
   return (
-    <main>
+    <div className="App">
       <Navbar />  
-      <h1>Hello, World!</h1>
-    </main>
+      <TodoCounter />
+      </div>
   );
+    
 }
-
 export default App;

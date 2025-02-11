@@ -62,13 +62,13 @@
   }
 
   .navbar-links {
-    display: none; /* Hide the links by default */
-    flex-direction: column; /* Stack the links vertically */
+    display: none; 
+    flex-direction: column; 
     position: absolute;
-    top: 60px; /* Position below the navbar */
+    top: 60px; 
     right: 0;
     background-color: rgba(75, 85, 104, 0.9);
-    width: 100%; /* Take up the full width */
+    width: 100%; 
     padding: 1rem;
     text-align: center;
   }
