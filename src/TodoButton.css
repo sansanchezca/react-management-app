@@ -1,0 +1,11 @@
+.TodoButton {
+    background-color: navy;
+    border: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: aliceblue;
+    height: 64px;
+    width: 120px;
+}

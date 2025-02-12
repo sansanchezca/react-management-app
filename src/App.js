@@ -8,7 +8,7 @@ import { TodoSearch } from './TodoSearch.js';
 import { TodoButton } from './TodoButton.js';
 
 const defaultTodo = [
-  { text: 'Cut Onion', completed: false},
+  { text: 'Cut Onion', completed: true},
   { text: 'Hi', completed: false},
   { text: 'Hola', completed: false},
   { text: 'HIIII', completed: false},
