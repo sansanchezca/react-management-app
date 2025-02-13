@@ -1,40 +1,38 @@
 import React from 'react';
-import './App.css';
-import { TodoCounter } from './TodoCounter.js'
-import { TodoList } from './TodoList.js';
-import { Navbar } from './Navbar.js';
-import { TodoItem } from './TodoItem.js';
-import { TodoSearch } from './TodoSearch.js';
-import { TodoButton } from './TodoButton.js';
+import { TodoCounter } from './TodoCounter';
+import { TodoSearch } from './TodoSearch';
+import { TodoList } from './TodoList';
+import { TodoItem } from './TodoItem';
+import { TodoButton } from './TodoButton';
+import { Navbar } from './Navbar';
 
-const defaultTodo = [
-  { text: 'Cut Onion', completed: true},
-  { text: 'Hi', completed: false},
-  { text: 'Hola', completed: false},
-  { text: 'HIIII', completed: false},
-]
+const defaultTodos = [
+  { text: 'Cortar cebolla', completed: true },
+  { text: 'Tomar el Curso de Intro a React.js', completed: false },
+  { text: 'Llorar con la Llorona', completed: false },
+  { text: 'LALALALALA', completed: false },
+];
+
 function App() {
   return (
-    <React.Fragment>
-      <Navbar />  
-
-      <TodoCounter  completed={16} total={25} />
+    <>
+    <Navbar/>
+      <TodoCounter completed={16} total={25} />
       <TodoSearch />
-      
+
       <TodoList>
-        {defaultTodo.map(todo => (
+        {defaultTodos.map(todo => (
           <TodoItem
-          key={todo.text}
-          text={todo.text}
-          completed={todo.completed}
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
           />
         ))}
-        
       </TodoList>
-
+      
       <TodoButton />
-      </React.Fragment>
+    </>
   );
-    
 }
+
 export default App;

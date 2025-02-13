@@ -4,7 +4,9 @@
     margin: 0;
     padding: '48px';
     font-weight: normal;
-    color: antiquewhite;
+    color: rgb(0, 0, 0);
+    text-shadow: 050px 5px 70px rgb(75, 236, 11);
+    margin-bottom: 50px;
 } 
 .TodoCounter span {
     font-weight: bold;
