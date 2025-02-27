@@ -1,13 +1,36 @@
 .TodoCounter {
-    font-size: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
     text-align: center;
-    margin: 0;
-    padding: '48px';
-    font-weight: normal;
-    color: rgb(0, 0, 0);
-    text-shadow: 050px 5px 70px rgb(75, 236, 11);
-    margin-bottom: 50px;
-} 
-.TodoCounter span {
+    font-size: 24px;
     font-weight: bold;
+    color: #58fcff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Gradient effect for text */
+.TodoCounter span {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hover effect */
+.TodoCounter:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .TodoCounter {
+        font-size: 20px;
+        padding: 15px;
+        max-width: 90%;
+    }
 }

@@ -4,7 +4,8 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { TodoButton } from './TodoButton';
-import { Navbar } from './Navbar';
+import ThemeToggle from './ThemeToggle';
+
 
 const defaultTodos = [
   { text: 'Cortar cebolla', completed: true },
@@ -28,15 +29,17 @@ function App() {
   return (
 
     <>
-    <Navbar/>
       <TodoCounter
         completed={completedTodos}
         total={totalTodos} 
       />
+      <ThemeToggle> </ThemeToggle>
+      
       <TodoSearch
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
+      
 
       <TodoList>
         {defaultTodos.map(todo => (
